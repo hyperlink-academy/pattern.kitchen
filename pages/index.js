@@ -26,14 +26,36 @@ export default function Home(props) {
 }
 
 const PatternLanguageList = (props) => (
-  <div className="flex gap-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {/* <div className="grid grid-cols-3 gap-4"> */}
     {props.patterns.map((p, index) => (
       <Link
         href={`/p/${p.path.slice(0, -4)}`}
         key={p.path}
-        className="bg-green-100 hover:bg-green-300 p-4 w-1/3 border rounded-md transition-all"
+        // className="bg-green-100 hover:bg-green-300 p-4 w-1/3 border rounded-md transition-all"
+        className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all min-h-[256px]"
       >
-        {p.meta?.title || p.path}
+        <div className="border p-1 border-black rounded-md h-full hover:border-white">
+          <div className="border p-1 border-black rounded-md h-full hover:border-white">
+            <div className="border p-1 border-black rounded-md h-full hover:border-white">
+              <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                  <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                    <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                      <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                        <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                          <div className="border p-1 border-black rounded-md h-full hover:border-white">
+                            <div className="p-2">{p.meta?.title || p.path}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Link>
     ))}
   </div>

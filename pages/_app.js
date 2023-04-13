@@ -33,9 +33,8 @@ export default function App({ Component, pageProps }) {
 
 const LayoutHome = (props) => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "auto", padding: "1rem" }}>
-      {props.children}
-    </div>
+    // <div style={{ maxWidth: "48rem", margin: "auto", padding: "1rem" }}>
+    <div className="lg:max-w-7xl m-auto px-8 py-4">{props.children}</div>
   );
 };
 
