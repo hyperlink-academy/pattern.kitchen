@@ -1,38 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pattern Kitchen
 
-## Getting Started
+## TL;DR
 
-First, run the development server:
+Pattern Kitchen is a collection of pattern languages, spanning domains and disciplines. It aims to be comprehensive, even a bit maximalist, including not only canonical pattern languages but adjacent resources, perhaps pattern-like, perhaps poetic, that feel resonant with the pattern language ethos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Tech stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- this is a static site built with [Next.js](https://nextjs.org/)
+- it also uses [Tailwind](https://tailwindcss.com/) for styles and [MDX](https://mdxjs.com/) for Markdown…and…that's pretty much it!
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## To contribute…
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Feel free to make a pull request with a new pattern language!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For each, please include at minimum:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- name / title (e.g. A Pattern Language)
+- author of the PL (comma-separate list if multiple)
+- short description (~1 sentence)
+- link(s) to where readers can learn more
 
-## Learn More
+Make a new .mdx file in the '/p' directory with slugified title and 'meta' object; see existing pages for a reference of what this should look like.
 
-To learn more about Next.js, take a look at the following resources:
+Optionally also include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- full description of the pattern language (in your own words, or if you include excerpts of descriptions for elsewhere, be sure to link to the source)
+- example patterns
+- tags (e.g. "urbanism" or "games")
+- contributor credit, if you'd like acknowledgement for contributing the pattern
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I also welcome questions or suggestions in new issues, emails with related thoughts, etc. :)
