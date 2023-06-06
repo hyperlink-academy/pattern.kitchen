@@ -45,8 +45,15 @@ const PatternLanguageList = (props) => (
                       <div className="border p-1 border-black rounded-md h-full hover:border-white">
                         <div className="border p-1 border-black rounded-md h-full hover:border-white">
                           <div className="border p-1 border-black rounded-md h-full hover:border-white">
-                            <div className="h-full flex flex-col p-2 justify-between">
-                              <h2>{p.meta?.title || p.path}</h2>
+                            <div className="h-full flex flex-col p-2 justify-between gap-4">
+                              <div className="flex flex-col gap-2">
+                                <h2 className="text-lg">
+                                  {p.meta?.title || p.path}
+                                </h2>
+                                <p className="text-sm italic">
+                                  {p.meta?.description}
+                                </p>
+                              </div>
                               {p.meta?.tags ? (
                                 <div className="flex gap-2">
                                   {p.meta?.tags.map((tag, index) => (
