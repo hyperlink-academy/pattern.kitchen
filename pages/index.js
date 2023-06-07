@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home(props) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Pattern Kitchen</title>
         <meta
           name="description"
@@ -14,7 +14,7 @@ export default function Home(props) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
       <main className="flex flex-col gap-4">
         <h1>Pattern Kitchen</h1>
