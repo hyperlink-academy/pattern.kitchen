@@ -1,28 +1,14 @@
-import Head from "next/head";
-
 import fs from "fs/promises";
 import Link from "next/link";
 
 export default function Home(props) {
   return (
-    <>
-      {/* <Head>
-        <title>Pattern Kitchen</title>
-        <meta
-          name="description"
-          content="Peruse a panoply of pattern languages"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
-
-      <main className="flex flex-col gap-4">
-        <h1>Pattern Kitchen</h1>
-        <p>Welcome! This is a place for pattern languages…</p>
-        <WIPBanner />
-        <PatternLanguageList patterns={props.patterns} />
-      </main>
-    </>
+    <main className="flex flex-col gap-4">
+      <h1>Pattern Kitchen</h1>
+      <p>Welcome! This is a place for pattern languages…</p>
+      <WIPBanner />
+      <PatternLanguageList patterns={props.patterns} />
+    </main>
   );
 }
 

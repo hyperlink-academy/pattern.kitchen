@@ -16,3 +16,16 @@ h3 {
   @apply text-lg;
   @apply font-bold;
 }
+
+blockquote {
+  @apply border-black;
+  /* @apply border; */
+  @apply border-l-4;
+  @apply bg-gray-100;
+  @apply p-4;
+  /* @apply rounded-md; */
+}
+
+blockquote p {
+  /* @apply ml-2; */
+}

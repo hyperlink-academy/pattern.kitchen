@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }) {
     return (
       <LayoutPatternLanguage>
         <Component {...pageProps} />
-        {/* {console.log(pageProps)} */}
       </LayoutPatternLanguage>
     );
   }
@@ -56,9 +55,7 @@ const LayoutPatternLanguage = (props) => {
       <div className="pb-4">
         <Link href="/">⇠ back</Link>
       </div>
-      {props.children}
-      {/* {console.log(props.children)} */}
-      {/* {console.log(pageProps)} */}
+      <div className="flex flex-col gap-4">{props.children}</div>
     </div>
   );
 };

@@ -20,9 +20,10 @@ function PLMeta(props: {
   tags: [];
 }) {
   return (
-    <div className="">
+    <div className="flex flex-col gap-2">
+      {/* <div className="flex flex-col gap-2 p-4 border border-black rounded-md"> */}
       <h1>{props.title}</h1>
-      <p>{props.description}</p>
+      {/* <p>{props.description}</p> */}
       <p>{props.author}</p>
       {props?.tags ? (
         <div className="flex gap-2">
@@ -40,7 +41,8 @@ function PLMeta(props: {
 // Links to learn more for PL page
 function PLLinks(props) {
   return (
-    <div className="p-4 rounded-md bg-slate-100">
+    // <div className="p-4 rounded-md border border-black flex flex-col gap-4">
+    <div className="p-4 rounded-md bg-yellow-400 flex flex-col gap-4">
       <h2 className="text-center">Learn More</h2>
       {props.children}
     </div>
@@ -50,8 +52,8 @@ function PLLinks(props) {
 // Link button for <PLLinks> section
 function PLLink(props: { title: string; url: string }) {
   return (
-    <button className="p-4 border rounded-md">
-      <a className="text-blue-700" href={props.url}>
+    <button className="p-4 rounded-md bg-white text-black hover:bg-black hover:text-white transition-all shadow-md">
+      <a className="" href={props.url}>
         {props.title}
       </a>
     </button>
