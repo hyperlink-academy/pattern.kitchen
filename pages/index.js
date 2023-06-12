@@ -17,14 +17,6 @@ const WIPBanner = () => (
     <p>⚠️ this website is a work in progress</p>
     <p>〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</p>
     <p>🔜 stay tuned for detailed pattern pages!</p>
-    <p>
-      <a
-        className="text-blue-900 underline"
-        href="https://github.com/hyperlink-academy/pattern.kitchen"
-      >
-        info / src / contribute
-      </a>
-    </p>
   </div>
 );
 

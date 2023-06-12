@@ -26,10 +26,14 @@ blockquote {
   /* @apply rounded-md; */
 }
 
+a {
+  /* @apply text-blue-700; */
+}
+
 blockquote p {
   /* @apply ml-2; */
 }
 
 blockquote a {
-  @apply text-blue-600;
+  /* @apply text-blue-600; */
 }
