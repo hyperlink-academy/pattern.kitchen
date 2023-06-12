@@ -58,7 +58,7 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
           key={randomPattern.path}
           className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all min-h-[256px]"
         >
-          random 🎲
+          random 🔀
         </Link>
       </div>
       {nextPattern ? (

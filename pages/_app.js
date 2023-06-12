@@ -58,13 +58,10 @@ const LayoutHome = (props) => {
 const LayoutPatternLanguage = (props) => {
   return (
     // PAGE WRAPPER
-    <div className="lg:max-w-7xl m-auto h-[calc(100dvh-146px)]">
+    <div className="lg:max-w-7xl m-auto">
       <Header />
-      {/* <div className="pb-4">
-        <Link href="/">⇠ back</Link>
-      </div> */}
       {/* CONTENT WRAPPER */}
-      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto h-[inherit]">
+      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto">
         {props.children}
       </main>
       <Footer />
@@ -74,8 +71,10 @@ const LayoutPatternLanguage = (props) => {
 
 const Header = (props) => {
   return (
-    <div className="sticky top-0 bg-white px-8 py-4 border-b mb-4">
+    <div className="sticky top-0 bg-white px-8 py-4 border-b mb-4 flex justify-between">
       <Link href="/">pattern.kitchen</Link>
+      <WIPBanner />
+      <Link href="/about">about</Link>
     </div>
   );
 };
@@ -102,3 +101,9 @@ const Footer = (props) => {
     </div>
   );
 };
+
+const WIPBanner = () => (
+  <div className="p-2 -m-2 bg-yellow-400 rounded-md">
+    <p>⚠️ this website is a work in progress</p>
+  </div>
+);

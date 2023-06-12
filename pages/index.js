@@ -6,19 +6,10 @@ export default function Home(props) {
     <>
       <h1>Pattern Kitchen</h1>
       <p>Welcome! This is a place for pattern languages…</p>
-      <WIPBanner />
       <PatternLanguageList patterns={props.patterns} />
     </>
   );
 }
-
-const WIPBanner = () => (
-  <div className="p-4 bg-yellow-400 rounded-md m-auto">
-    <p>⚠️ this website is a work in progress</p>
-    <p>〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</p>
-    <p>🔜 stay tuned for detailed pattern pages!</p>
-  </div>
-);
 
 const PatternLanguageList = (props) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
