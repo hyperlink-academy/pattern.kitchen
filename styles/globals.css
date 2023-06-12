@@ -29,3 +29,7 @@ blockquote {
 blockquote p {
   /* @apply ml-2; */
 }
+
+blockquote a {
+  @apply text-blue-600;
+}

@@ -4,3 +4,27 @@ export const meta = {
   author: "Lars Weiler, Jens Ohlig",
   tags: ["social 👥", "space 🪑"],
 };
+
+<PLHead title={meta.title} description={meta.description} />
+
+<PLMeta
+  title={meta.title}
+  description={meta.description}
+  author={meta.author}
+  tags={meta.tags}
+/>
+
+<PLLinks>
+  <PLLink
+    title="Hackerspace Design Patterns wiki"
+    url="https://wiki.hackerspaces.org/Design_Patterns"
+  />
+  <PLLink
+    title="Building a Hacker Space - presentation info"
+    url="https://fahrplan.events.ccc.de/congress/2007/Fahrplan/events/2133.en.html"
+  />
+  <PLLink
+    title="Building a Hacker Space - presentation PDF"
+    url="https://fahrplan.events.ccc.de/congress/2007/Fahrplan/attachments/1003_Building%20a%20Hacker%20Space.pdf"
+  />
+</PLLinks>
