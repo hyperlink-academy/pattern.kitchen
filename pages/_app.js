@@ -45,11 +45,10 @@ const LayoutHome = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* PAGE WRAPPER */}
-      {/* <div className="lg:max-w-7xl m-auto px-8 py-4"> */}
       <div className="lg:max-w-7xl m-auto">
         <Header />
         {/* CONTENT WRAPPER */}
-        <div className="px-8 py-4">{props.children}</div>
+        <main className="flex flex-col gap-4 px-8 py-4">{props.children}</main>
         <Footer />
       </div>
     </>
@@ -65,9 +64,9 @@ const LayoutPatternLanguage = (props) => {
         <Link href="/">⇠ back</Link>
       </div> */}
       {/* CONTENT WRAPPER */}
-      <div className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto">
+      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto">
         {props.children}
-      </div>
+      </main>
       <Footer />
     </div>
   );
@@ -91,7 +90,6 @@ const Footer = (props) => {
             hyperlink.academy
           </a>
         </span>
-
         <span>
           <a
             className="text-blue-700"

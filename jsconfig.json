@@ -3,6 +3,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "moduleResolution": "node"
   }
 }

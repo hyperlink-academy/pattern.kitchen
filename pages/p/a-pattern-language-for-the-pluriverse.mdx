@@ -1,3 +1,5 @@
+import fs from "fs/promises";
+
 export const meta = {
   title: "A Pattern Language for the Pluriverse",
   description: "envisioning collaborative patterns for a better internet",
@@ -7,6 +9,8 @@ export const meta = {
 };
 
 <PLHead title={meta.title} description={meta.description} />
+
+<PLNav patterns={props.patterns} currentTitle={meta.title} />
 
 <PLMeta
   title={meta.title}
@@ -31,3 +35,19 @@ A project by [Verses](https://verses.xyz/).
     url="https://pluriverse.world/"
   />
 </PLLinks>
+
+export const getStaticProps = async () => {
+  let patternFilenames = await fs.readdir("./pages/p");
+  const patterns = await Promise.all(
+    patternFilenames.map(async (p) => {
+      let patternModule = await import(`pages/p/${p}`);
+      let patternMeta = patternModule.meta ? patternModule.meta : null;
+      return { meta: patternMeta, path: p };
+    })
+  );
+  return {
+    props: {
+      patterns: patterns,
+    },
+  };
+};

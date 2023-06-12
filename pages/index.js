@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Home(props) {
   return (
-    <main className="flex flex-col gap-4">
+    <>
       <h1>Pattern Kitchen</h1>
       <p>Welcome! This is a place for pattern languages…</p>
       <WIPBanner />
       <PatternLanguageList patterns={props.patterns} />
-    </main>
+    </>
   );
 }
 

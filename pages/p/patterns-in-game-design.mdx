@@ -1,3 +1,5 @@
+import fs from "fs/promises";
+
 export const meta = {
   title: "Patterns in Game Design",
   description: "applying patterns to game interactions and play",
@@ -6,6 +8,8 @@ export const meta = {
 };
 
 <PLHead title={meta.title} description={meta.description} />
+
+<PLNav patterns={props.patterns} currentTitle={meta.title} />
 
 <PLMeta
   title={meta.title}
@@ -30,3 +34,19 @@ Cool stuff about games!
     url="https://tecfa.unige.ch/tecfa/maltt/VIP/Ressources/Articles/Game%20Design%20Patterns/"
   />
 </PLLinks>
+
+export const getStaticProps = async () => {
+  let patternFilenames = await fs.readdir("./pages/p");
+  const patterns = await Promise.all(
+    patternFilenames.map(async (p) => {
+      let patternModule = await import(`pages/p/${p}`);
+      let patternMeta = patternModule.meta ? patternModule.meta : null;
+      return { meta: patternMeta, path: p };
+    })
+  );
+  return {
+    props: {
+      patterns: patterns,
+    },
+  };
+};

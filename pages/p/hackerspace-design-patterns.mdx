@@ -1,3 +1,5 @@
+import fs from "fs/promises";
+
 export const meta = {
   title: "Hackerspace Design Patterns",
   description: "patterns for creating and running effective hackerspaces",
@@ -6,6 +8,8 @@ export const meta = {
 };
 
 <PLHead title={meta.title} description={meta.description} />
+
+<PLNav patterns={props.patterns} currentTitle={meta.title} />
 
 <PLMeta
   title={meta.title}
@@ -28,3 +32,19 @@ export const meta = {
     url="https://fahrplan.events.ccc.de/congress/2007/Fahrplan/attachments/1003_Building%20a%20Hacker%20Space.pdf"
   />
 </PLLinks>
+
+export const getStaticProps = async () => {
+  let patternFilenames = await fs.readdir("./pages/p");
+  const patterns = await Promise.all(
+    patternFilenames.map(async (p) => {
+      let patternModule = await import(`pages/p/${p}`);
+      let patternMeta = patternModule.meta ? patternModule.meta : null;
+      return { meta: patternMeta, path: p };
+    })
+  );
+  return {
+    props: {
+      patterns: patterns,
+    },
+  };
+};
