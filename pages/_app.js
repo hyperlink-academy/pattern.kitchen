@@ -58,13 +58,13 @@ const LayoutHome = (props) => {
 const LayoutPatternLanguage = (props) => {
   return (
     // PAGE WRAPPER
-    <div className="lg:max-w-7xl m-auto">
+    <div className="lg:max-w-7xl m-auto h-[calc(100dvh-146px)]">
       <Header />
       {/* <div className="pb-4">
         <Link href="/">⇠ back</Link>
       </div> */}
       {/* CONTENT WRAPPER */}
-      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto">
+      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto h-[inherit]">
         {props.children}
       </main>
       <Footer />

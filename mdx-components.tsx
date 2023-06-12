@@ -34,10 +34,9 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
   let randomPattern = props.patterns[Math.floor(Math.random() * (length + 1))];
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mb-8">
       {prevPattern ? (
         <div>
-          {/* <span>prev: </span> */}
           <Link
             href={`/p/${prevPattern.path.slice(0, -4)}`}
             key={prevPattern.path}
@@ -64,7 +63,6 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
       </div>
       {nextPattern ? (
         <div>
-          {/* <span>next: </span> */}
           <Link
             href={`/p/${nextPattern.path.slice(0, -4)}`}
             key={nextPattern.path}
