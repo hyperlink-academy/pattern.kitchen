@@ -45,10 +45,12 @@ const LayoutHome = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* PAGE WRAPPER */}
-      <div className="lg:max-w-7xl m-auto">
+      <div className="lg:max-w-7xl m-auto min-h-[calc(100dvh-146px)]">
         <Header />
         {/* CONTENT WRAPPER */}
-        <main className="flex flex-col gap-4 px-8 py-4">{props.children}</main>
+        <main className="flex flex-col gap-4 px-8 py-4 min-h-[calc(100dvh-146px)]">
+          {props.children}
+        </main>
         <Footer />
       </div>
     </>
@@ -58,10 +60,10 @@ const LayoutHome = (props) => {
 const LayoutPatternLanguage = (props) => {
   return (
     // PAGE WRAPPER
-    <div className="lg:max-w-7xl m-auto">
+    <div className="lg:max-w-7xl m-auto min-h-[calc(100dvh-146px)]">
       <Header />
       {/* CONTENT WRAPPER */}
-      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto">
+      <main className="flex flex-col gap-4 max-w-3xl px-8 py-4 m-auto min-h-[calc(100dvh-146px)]">
         {props.children}
       </main>
       <Footer />
@@ -81,7 +83,7 @@ const Header = (props) => {
 
 const Footer = (props) => {
   return (
-    <div className="sticky bottom-0 bg-white px-8 py-4 border-t mt-4">
+    <div className="sticky bottom-0 bg-white px-8 py-4 border-t mt-4 text-sm sm:text-base">
       <div className="flex justify-between">
         <span>
           a project from{" "}
@@ -104,6 +106,6 @@ const Footer = (props) => {
 
 const WIPBanner = () => (
   <div className="p-2 -m-2 bg-yellow-400 rounded-md">
-    <p>⚠️ this website is a work in progress</p>
+    <p>⚠️ work in progress!</p>
   </div>
 );
