@@ -7,16 +7,20 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="text-center flex flex-col gap-2">
+      <div className="text-center flex flex-col gap-2 mb-2">
         <h1>Pattern Kitchen</h1>
         <p className="italic">peruse a panoply of pattern languages…</p>
       </div>
-      <PatternLanguageFilter
-        patterns={props.patterns}
-        filter={filter}
-        setFilter={setFilter}
-      />
-      <PatternLanguageList patterns={props.patterns} filter={filter} />
+
+      <div className="flex flex-col gap-4">
+        <PatternLanguageFilter
+          patterns={props.patterns}
+          filter={filter}
+          setFilter={setFilter}
+          className="pb-8"
+        />
+        <PatternLanguageList patterns={props.patterns} filter={filter} />
+      </div>
     </>
   );
 }
