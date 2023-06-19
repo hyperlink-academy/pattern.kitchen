@@ -119,14 +119,15 @@ function PLLinks(props) {
   );
 }
 
-// Link button for <PLLinks> section
+// Link for <PLLinks> section
 function PLLink(props: { title: string; url: string }) {
   return (
-    <button className="p-4 rounded-md bg-white text-black hover:bg-black hover:text-white transition-all shadow-md">
-      <a className="" href={props.url}>
-        {props.title}
-      </a>
-    </button>
+    <a
+      className="p-4 w-full text-center rounded-md bg-white hover:bg-black text-black hover:text-white transition-all shadow-md hover:no-underline"
+      href={props.url}
+    >
+      {props.title}
+    </a>
   );
 }
 

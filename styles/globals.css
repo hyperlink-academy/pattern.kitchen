@@ -27,7 +27,13 @@ blockquote {
 }
 
 a {
-  /* @apply text-blue-700; */
+  @apply text-blue-700;
+  @apply transition-all;
+}
+a:hover {
+  @apply text-blue-900;
+  @apply underline;
+  @apply transition-all;
 }
 
 blockquote p {

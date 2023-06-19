@@ -23,12 +23,13 @@ export default function App({ Component, pageProps }) {
     );
   }
   // default fallback
+  // NB: for now assumes narrower layout for text page e.g. /about
   // TODO: add more generic fallback, or 404 etc.
   // (OR could e.g. extract layout wrapper)
   return (
-    <LayoutHome>
+    <LayoutPatternLanguage>
       <Component {...pageProps} />
-    </LayoutHome>
+    </LayoutPatternLanguage>
   );
 }
 

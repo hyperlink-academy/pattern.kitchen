@@ -19,7 +19,7 @@ const PatternLanguageList = (props) => (
         href={`/p/${p.path.slice(0, -4)}`}
         key={p.path}
         // className="bg-green-100 hover:bg-green-300 p-4 w-1/3 border rounded-md transition-all"
-        className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all duration-300 min-h-[256px]"
+        className="bg-white text-black hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all duration-300 min-h-[256px]"
       >
         <div className="border p-1 border-black rounded-md h-full hover:border-white transition-[border-color] duration-500">
           <div className="border p-1 border-black rounded-md h-full hover:border-white transition-[border-color] duration-500">
