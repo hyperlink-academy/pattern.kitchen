@@ -27,11 +27,11 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
     currentIndex >= 0 && currentIndex < length
       ? props.patterns[currentIndex + 1]
       : null;
-  const [rand, setRand] = React.useState(null);
+  const [rand, setRand] = React.useState(Math.floor(Math.random() * length));
   React.useEffect(() => {
-    setRand(Math.floor(Math.random() * (length + 1)));
-  }, [length]);
-  let randomPattern = props.patterns[Math.floor(Math.random() * (length + 1))];
+    setRand(Math.floor(Math.random() * length));
+  }, [length, currentIndex]);
+  let randomPattern = props.patterns[Math.floor(Math.random() * length)];
 
   return (
     <div className="flex justify-between mb-8">
@@ -52,15 +52,17 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
           </a>
         </div>
       )}
-      <div>
-        <Link
-          href={`/p/${randomPattern.path.slice(0, -4)}`}
-          key={randomPattern.path}
-          className="text-black bg-white hover:bg-black hover:text-white p-2 border border-black rounded-md transition-all min-h-[256px] hover:no-underline"
-        >
-          random 🔀
-        </Link>
-      </div>
+      {randomPattern && (
+        <div>
+          <Link
+            href={`/p/${randomPattern.path.slice(0, -4)}`}
+            key={randomPattern.path}
+            className="text-black bg-white hover:bg-black hover:text-white p-2 border border-black rounded-md transition-all min-h-[256px] hover:no-underline"
+          >
+            random 🔀
+          </Link>
+        </div>
+      )}
       {nextPattern ? (
         <div>
           <Link
