@@ -40,14 +40,14 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
           <Link
             href={`/p/${prevPattern.path.slice(0, -4)}`}
             key={prevPattern.path}
-            className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all min-h-[256px]"
+            className="text-black bg-white hover:bg-black hover:text-white p-2 border border-black rounded-md transition-all min-h-[256px] hover:no-underline"
           >
             ← prev
           </Link>
         </div>
       ) : (
         <div>
-          <a className="bg-white p-1 border border-gray-400 text-gray-400 rounded-md">
+          <a className="bg-white p-2 border border-gray-400 text-gray-400 rounded-md hover:no-underline hover:text-gray-400">
             ← prev
           </a>
         </div>
@@ -56,7 +56,7 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
         <Link
           href={`/p/${randomPattern.path.slice(0, -4)}`}
           key={randomPattern.path}
-          className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all min-h-[256px]"
+          className="text-black bg-white hover:bg-black hover:text-white p-2 border border-black rounded-md transition-all min-h-[256px] hover:no-underline"
         >
           random 🔀
         </Link>
@@ -66,14 +66,14 @@ function PLNav(props: { patterns: Array<any>; currentTitle: string }) {
           <Link
             href={`/p/${nextPattern.path.slice(0, -4)}`}
             key={nextPattern.path}
-            className="bg-white hover:bg-black hover:text-white p-1 border border-black rounded-md transition-all min-h-[256px]"
+            className="text-black bg-white hover:bg-black hover:text-white p-2 border border-black rounded-md transition-all min-h-[256px] hover:no-underline"
           >
             next →
           </Link>
         </div>
       ) : (
         <div>
-          <a className="bg-white p-1 border border-gray-400 text-gray-400 rounded-md">
+          <a className="bg-white p-2 border border-gray-400 text-gray-400 rounded-md hover:no-underline hover:text-gray-400">
             next →
           </a>
         </div>

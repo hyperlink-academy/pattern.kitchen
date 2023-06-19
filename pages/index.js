@@ -9,7 +9,7 @@ export default function Home(props) {
     <>
       <div className="text-center flex flex-col gap-2">
         <h1>Pattern Kitchen</h1>
-        <p>Welcome! This is a place for pattern languages…</p>
+        <p className="italic">peruse a panoply of pattern languages…</p>
       </div>
       <PatternLanguageFilter
         patterns={props.patterns}
@@ -89,7 +89,7 @@ function PatternLanguageFilter(props) {
   let filter = props.filter;
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-y-3 gap-x-2">
       {tags.map((t, index) => (
         <button
           className=""
@@ -98,14 +98,14 @@ function PatternLanguageFilter(props) {
             filter !== t ? props.setFilter(t) : props.setFilter(null);
           }}
         >
-          <span
-            className={`hover:bg-black hover:text-white p-1 text-sm border rounded-md w-fit ${
-              filter == t ? "bg-blue-700 text-white" : ""
+          <div
+            className={`hover:bg-black hover:text-white p-2 text-sm border border-black rounded-md w-fit transition-all ${
+              filter == t ? "border-blue-700 border-b-4 -mb-1" : ""
             }`}
             key={t}
           >
             {t}
-          </span>
+          </div>
         </button>
       ))}
     </div>

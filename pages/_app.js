@@ -40,7 +40,7 @@ const LayoutHome = (props) => {
         <title>Pattern Kitchen</title>
         <meta
           name="description"
-          content="Peruse a panoply of pattern languages"
+          content="Peruse a panoply of pattern languages…"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
