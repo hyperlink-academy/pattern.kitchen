@@ -1,0 +1,47 @@
+import fs from "fs/promises";
+
+export const meta = {
+  title: "Workflow Patterns",
+  description:
+    "patterns for process technology: control flow, data, resource distribution and more",
+  author: "Nick Russell, Wil M.P. van der Aalst, Arthur H. M. ter Hofstede",
+  tags: ["information 🔡", "organizations 📂"],
+};
+
+<PLHead title={meta.title} description={meta.description} />
+
+<PLNav patterns={props.patterns} currentTitle={meta.title} />
+
+<PLMeta
+  title={meta.title}
+  description={meta.description}
+  author={meta.author}
+  tags={meta.tags}
+/>
+
+<PLLinks>
+  <PLLink
+    title="Workflow Patterns (homepage)"
+    url="http://www.workflowpatterns.com/"
+  />
+  <PLLink
+    title="Workflow Patterns: The Definitive Guide"
+    url="https://mitpress.mit.edu/9780262029827/workflow-patterns/"
+  />
+</PLLinks>
+
+export const getStaticProps = async () => {
+  let patternFilenames = await fs.readdir("./pages/p");
+  const patterns = await Promise.all(
+    patternFilenames.map(async (p) => {
+      let patternModule = await import(`pages/p/${p}`);
+      let patternMeta = patternModule.meta ? patternModule.meta : null;
+      return { meta: patternMeta, path: p };
+    })
+  );
+  return {
+    props: {
+      patterns: patterns,
+    },
+  };
+};
